@@ -30,6 +30,12 @@ body{
     text-shadow: 0px 0px 10px white;
 
 }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
 .navbar{
     background: rgb(0,157,255);
     background: linear-gradient(276deg, rgba(0,157,255,1) 0%, rgba(117,70,252,1) 100%);
@@ -50,9 +56,22 @@ body{
 }
 .btn-close{
     --bs-btn-close-color:white !important;
-    --bs-btn-close-bg: white;
+    --bs-btn-close-bg: white !important;
+    color: white !important;
     font-size: 25px;
+    --bs-btn-close-opacity: 1 !important;
 }
+
 .btn-close:hover{
     text-shadow: 0px 0px 10px white;
+}
+
+.btn{
+    background: rgb(0,157,255);
+    background: linear-gradient(276deg, rgba(0,157,255,1) 0%, rgba(117,70,252,1) 100%);
+    transition: .3s all;
+}
+.btn:hover{
+    transform:scale(120%);
+    box-shadow: 0px 0px 10px #353535;
 }
