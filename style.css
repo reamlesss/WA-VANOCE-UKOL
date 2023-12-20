@@ -1,0 +1,58 @@
+body{
+    font-family: 'Silkscreen', sans-serif;
+}
+
+body{
+    background-color: #201E1F;
+}
+.offcanvas{
+    background: rgb(0,157,255);
+    background: linear-gradient(180deg, rgba(0,157,255,1) 0%, rgba(117,70,252,1) 100%);
+}
+.offcanvas-title{
+    color: white;
+}
+.offcanvas-toggler{
+    color: white;
+    font-size: 40px;
+    text-align: center  ;
+    /*border: none;*/
+    vertical-align: center;
+
+}
+.navbar-toggler{
+    border:none;
+    color: white;
+    vertical-align: center;
+    transition: .2s all;
+}
+.navbar-toggler:hover{
+    text-shadow: 0px 0px 10px white;
+
+}
+.navbar{
+    background: rgb(0,157,255);
+    background: linear-gradient(276deg, rgba(0,157,255,1) 0%, rgba(117,70,252,1) 100%);
+}
+.navbar a{
+    color: white;
+    transition: .2s all;
+    font-size: 30px;
+    text-align: center;
+
+}
+.active{
+    color: white !important;
+}
+.navbar a:hover{
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+.btn-close{
+    --bs-btn-close-color:white !important;
+    --bs-btn-close-bg: white;
+    font-size: 25px;
+}
+.btn-close:hover{
+    text-shadow: 0px 0px 10px white;
+}
