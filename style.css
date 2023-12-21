@@ -75,3 +75,19 @@ body{
     transform:scale(120%);
     box-shadow: 0px 0px 10px #353535;
 }
+p{
+    color: white;
+}
+.ttt-button{
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: center;
+    padding: 40px 50px 10px;
+    transition: .5s all;
+}
+.ttt-button:hover{
+    background: #7C7C7C;
+}
