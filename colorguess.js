@@ -4,7 +4,18 @@ const color2 = document.getElementById("color2");
 const color3 = document.getElementById("color3");
 const color4 = document.getElementById("color4");
 const infoText = document.getElementById("info-text");
+const newGameButton = document.getElementById('new-game-button');
 let playing = true;
+
+
+function showNewGameButton() {
+    newGameButton.classList.remove('new-game-button-hide');
+    newGameButton.classList.add('new-game-button-show');    
+}
+
+function startNewGame() {
+    location.reload();
+}
 
 function generateRandomHexCode() {
   const randomNum = Math.floor(Math.random() * 16777216);
@@ -103,6 +114,7 @@ function pickColor(index) {
           colorText.innerHTML = 'COLOR!'
           colorText.style.color = rgbaToHex(color1.style.backgroundColor).toUpperCase()
           infoText.appendChild(colorText);
+          showNewGameButton();
           playing = false;
         } else {
           color1.style.display = "none";
@@ -113,11 +125,12 @@ function pickColor(index) {
         if (
           rgbaToHex(color2.style.backgroundColor) == rightColor.toLowerCase()
         ) {
-          infoText.innerHTML = "YOU WIN THATS THE COLOR!";
+          infoText.innerHTML = "YOU WIN THATS THE ";
            const colorText = document.createElement("span");
           colorText.innerHTML = 'COLOR!'
           colorText.style.color = rgbaToHex(color2.style.backgroundColor).toUpperCase();
           infoText.appendChild(colorText);
+          showNewGameButton();
           playing = false;
         } else {
           color2.style.display = "none";
@@ -128,11 +141,12 @@ function pickColor(index) {
         if (
           rgbaToHex(color3.style.backgroundColor) == rightColor.toLowerCase()
         ) {
-          infoText.innerHTML = "YOU WIN THATS THE COLOR!";
+          infoText.innerHTML = "YOU WIN THATS THE ";
            const colorText = document.createElement("span");
           colorText.innerHTML = 'COLOR!'
           colorText.style.color = rgbaToHex(color3.style.backgroundColor).toUpperCase();
           infoText.appendChild(colorText);
+          showNewGameButton();
           playing = false;
         } else {
           color3.style.display = "none";
@@ -143,11 +157,12 @@ function pickColor(index) {
         if (
           rgbaToHex(color4.style.backgroundColor) == rightColor.toLowerCase()
         ) {
-          infoText.innerHTML = "YOU WIN THATS THE COLOR!";
+          infoText.innerHTML = "YOU WIN THATS THE ";
            const colorText = document.createElement("span");
           colorText.innerHTML = 'COLOR!'
           colorText.style.color = rgbaToHex(color4.style.backgroundColor).toUpperCase();
           infoText.appendChild(colorText);
+          showNewGameButton();
           playing = false;
         } else {
           color4.style.display = "none";

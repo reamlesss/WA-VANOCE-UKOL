@@ -171,10 +171,9 @@ p {
 @keyframes showWinningText {
   0% {
     transform: scale(0%);
+    filter: blur(12px);
   }
-  75% {
-    transform: scale(110%);
-  }
+  
   100% {
     transform: scale(100%);
   }
@@ -212,9 +211,7 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: rainbow_animation 2s ease-in-out infinite,
-    showWinningText 1s linear, hoverAnimation 3s ease-in-out infinite,
-    rainbow-shadow 1s ease-in-out infinite;
+  animation:     showWinningText .5s ease-in-out, rainbow_animation 2s ease-in-out infinite;
   background-size: 400% 100%;
 }
 
@@ -247,7 +244,7 @@ p {
 }
 .restart-button-visible {
   font-size: 28px;
-  animation: restartButtonAnim 2s ease-in-out infinite;
+  animation: showMenu 1s ease-in-out ,restartButtonAnim 2s ease-in-out infinite 1s;
 }
 
 
@@ -382,4 +379,13 @@ p {
 #wrong-text{
   margin-top: 50px;
   color: white;
+}
+.new-game-button-show{
+  font-size: 30px;
+  color: white;
+  animation: showCircles 1s;
+  
+}
+.new-game-button-hide{
+  display: none !important;
 }

@@ -55,3 +55,7 @@ function checkWinner() {
 
   return false;
 }
+
+function newGame() {
+  location.reload()
+}
