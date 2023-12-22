@@ -1,25 +1,28 @@
 let currentPlayer = "X";
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let gameActive = true;
+const restartButton = document.getElementById("restartButton");
 
 function handleClick(index) {
   if (gameBoard[index - 1] === "" && gameActive) {
     gameBoard[index - 1] = currentPlayer;
     document.getElementById(`button${index}`).textContent = currentPlayer;
 
-
     if (checkWinner()) {
       const winnerText = document.getElementById("winnerText");
       winnerText.textContent = `WINNER IS PLAYER ${currentPlayer}`;
       winnerText.classList.remove("win-text-hidden");
       winnerText.classList.add("win-text-visible");
-      const restartButton = document.getElementById("restartButton");
-      restartButton.classList.remove('restart-button-hidden');
-      restartButton.classList.add('restart-button-visible');
-      
+
+      restartButton.classList.remove("restart-button-hidden");
+      restartButton.classList.add("restart-button-visible");
+
       gameActive = false;
     } else if (gameBoard.every((cell) => cell !== "")) {
       document.getElementById("playerTurn").textContent = "It's a tie!";
+      restartButton.classList.remove("restart-button-hidden");
+      restartButton.classList.add("restart-button-visible");
+
       gameActive = false;
     } else {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -57,5 +60,5 @@ function checkWinner() {
 }
 
 function newGame() {
-  location.reload()
+  location.reload();
 }
