@@ -36,6 +36,7 @@ function generateHex(previousColor) {
 rightColor = generateRandomHexCode();
 
 function createCircles() {
+  playing = true;
   hexText.innerHTML = rightColor;
 
   const randomNum = Math.floor(Math.random() * level);
@@ -56,6 +57,7 @@ function createCircles() {
           colorText.style.color = circle.style.backgroundColor;
           infoText.appendChild(colorText);
           showNewGameButton();
+          playing = false;
         }
       });
     } else {
@@ -101,4 +103,8 @@ function wrong(color) {
   colorText.innerHTML = color.toUpperCase();
   colorText.style.color = color.toUpperCase();
   infoText.appendChild(colorText);
+}
+
+function deleteOtherCircles(circle) {
+  const circles = document.querySelectorAll("color-button-visible");
 }
